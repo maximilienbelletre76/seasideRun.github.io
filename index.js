@@ -42,7 +42,7 @@ const imgBox = document.querySelector("#imgbox");
 //generer les images
 for (let i = 1; i <= 20; i++) {
   const img = document.createElement("img");
-  img.src = `./ASSETS/BoxNews/imgbox${i}.jpg`;
+  img.src = `./ASSET/BoxNews/imgbox${i}.jpg`;
   img.alt = `image numero ${i}`;
   imgBox.appendChild(img);
   img.style.borderRadius = "50px";

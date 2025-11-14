@@ -1,18 +1,4 @@
-//opacite barre de navigation
-
-const barreNav = document.querySelector("nav");
-let scrollTimer;
-
-document.addEventListener("scroll", () => {
-  barreNav.style.opacity = "0.5";
-  clearTimeout(scrollTimer);
-
-  scrollTimer = setTimeout(() => {
-    barreNav.style.opacity = "1";
-  }, 0);
-});
-
-//aficher le menu
+// aficher le menu
 
 const logo = document.querySelector("#Home");
 const menu = document.querySelector("#menuContainer");
@@ -42,10 +28,12 @@ const imgBox = document.querySelector("#imgbox");
 //generer les images
 for (let i = 1; i <= 20; i++) {
   const img = document.createElement("img");
-  img.src = `ASSETS/BoxNews/imgbox${i}.jpg`;
+  img.src = `./ASSETS/BoxNews/imgbox${i}.jpg`;
   img.alt = `image numero ${i}`;
-  imgBox.appendChild(img);
   img.style.borderRadius = "50px";
+  img.onload = () => {
+    imgBox.appendChild(img);
+  };
 }
 let speed = 1;
 let isPaused = false;

@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="Fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seaside Running</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div id="Home">
-                <img src="./ASSETS/IMG/LogoClub.png" alt="Acceuil">
-            </div>
-        </nav>
+      <span id="Home">
+        <img src="./ASSETS/IMG/LogoClub.png" alt="Acceuil" />
+      </span>
     </header>
     <main>
-        <!-- menu de naviguation -->
-        <span id="menuContainer">
-            <ul id="menu">
-                <li class="Onglet"  id="Usclub">Notre club</li>
-                <li class="Onglet" id="calendar">Calendrier</li>
-                <li class="Onglet" id="Training">Les séances</li>
-                <li class="Onglet" id="ContactUs">Nous contacter</li>
-            </ul>
-        </span>
-        
-        <div id="newsContainer">
-            <div id="imgbox"></div>
+      <div id="navbar"></div>
+      <!-- menu de naviguation -->
+      <span id="menuContainer">
+        <ul id="menu">
+          <li class="Onglet" id="Usclub">Notre club</li>
+          <li class="Onglet" id="calendar">Calendrier</li>
+          <li class="Onglet" id="Training">Les séances</li>
+          <li class="Onglet" id="ContactUs">Nous contacter</li>
+        </ul>
+      </span>
+      <div id="imgbox"></div>
+      <div id="Usclub2">
+        <div id="UsClubTitle"><h2>Notre Club</h2></div>
+        <div class="imgUsclub" id="imgBerneval">
+          <img src="./ASSETS/IMG/img bernval.jpg" alt="image berneval" />
         </div>
-        <div id="Usclub2">
-            <div  
-              id="UsClubTitle"><h2>Notre Club</h2>
-            </div>
-            <div id="imgBerneval">
-                <img src="./ASSETS/IMG/img bernval.jpg" alt="image berneval"> 
-            </div>
-            <div id="Where">
-                <h2>D'ou viens Seaside Run ?</h2>
-                <p><strong>Seaside Run</strong> prend naissance en <strong>juin 2025</strong>, dans la commune de Petit-Caux, en Normandie, à une dizaine de kilomètres de <strong>Dieppe</strong>. Niché sur la splendide <strong>côte d’Albâtre</strong>, c’est plus particulièrement dans la commune déléguée de Berneval-le-Grand que le groupe voit le jour.
-                    <br>
-                    <br>
-                Ce projet est né de l’envie d’un <strong>groupe d’amies</strong> ayant vécu leurs plus belles années dans ce village, et de leur désir de <strong>rassembler un maximum de Caux-Marins</strong> autour d’une passion commune : <strong>la course à pied, la randonnée</strong>, et <strong>la découverte de notre territoire</strong>.</p>
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore officiis rem reiciendis quasi a blanditiis exercitationem, aliquam vel asperiores at adipisci. Soluta at a deleniti voluptatum aliquam aliquid, omnis reiciendis?</p>
-            </div>
+        <div class="Where">
+          <h2>D'ou viens Seaside Run ?</h2>
+          <p>
+            <strong>Seaside Run</strong> prend naissance en
+            <strong>juin 2025</strong>, dans la commune de Petit-Caux, en
+            Normandie, à une dizaine de kilomètres de <strong>Dieppe</strong>.
+            Niché sur la splendide <strong>côte d’Albâtre</strong>, c’est plus
+            particulièrement dans la commune déléguée de Berneval-le-Grand que
+            le groupe voit le jour.
+            <br />
+            <br />
+            Ce projet est né de l’envie d’un
+            <strong>groupe d’amies</strong> ayant vécu leurs plus belles années
+            dans ce village, et de leur désir de
+            <strong>rassembler un maximum de Caux-Marins</strong> autour d’une
+            passion commune : <strong>la course à pied, la randonnée</strong>,
+            et <strong>la découverte de notre territoire</strong>.
+          </p>
         </div>
+        <div class="imgUsclub" id="imgEquipe">
+          <img
+            src="./ASSETS/IMG/Equipe Seaside.jpg"
+            alt="photo equipe bureau
+          Seaside Run"
+          />
+        </div>
+        <div class="Where" id="equipeTxt">
+          <h2>Qui est derriere Seaside Run?</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+            officiis rem reiciendis quasi a blanditiis exercitationem, aliquam
+            vel asperiores at adipisci. Soluta at a deleniti voluptatum aliquam
+            aliquid, omnis reiciendis?
+          </p>
+        </div>
+      </div>
     </main>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

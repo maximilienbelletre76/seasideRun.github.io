@@ -21,7 +21,7 @@
   position: fixed;
   top: 0;
   left: 50%;
-  height: 13%;
+  height: 12%;
   width: 100px;
   display: flex;
   justify-content: space-around;
@@ -54,7 +54,7 @@ main {
   display: flex;
   justify-content: flex-end;
   width: 150px;
-  min-height: 300px;
+  min-height: 250px;
   border-bottom: 5px solid orange;
   transform: translateX(-50%);
   border-radius: 0 0 100px 100px;
@@ -68,7 +68,7 @@ main {
 #menu {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
+  padding-top: 100px;
   font-family: AcidGreen;
   list-style: none;
   text-align: center;
@@ -93,6 +93,7 @@ main {
   align-items: center;
   padding: 20px;
   gap: 40px;
+  justify-items: center;
 }
 
 #imgbox img {
@@ -109,7 +110,8 @@ main {
   width: 100%;
   background: darkblue;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 #UsClubTitle {
   font-family: AcidGreen;
@@ -122,7 +124,7 @@ main {
 #UsClubTitle h2 {
   padding: 0;
   color: skyblue;
-  width: 40%;
+  width: 50%;
   font-size: 5rem;
   font-weight: 10;
   -webkit-text-stroke: 1px white;
@@ -131,7 +133,8 @@ main {
 }
 
 .Where {
-  max-height: 80%;
+  grid-column: 3/4;
+  max-height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,15 +161,16 @@ main {
 }
 
 .imgUsclub {
+  grid-column: 1/3;
   margin-top: 25px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-height: 80%;
+  max-height: 50%;
   width: 100%;
 }
 .imgUsclub img {
-  height: 100%;
+  max-height: 550px;
   max-width: 90%;
   margin: 20px;
   border-radius: 250px;
@@ -175,14 +179,29 @@ main {
 }
 
 #imgEquipe {
-  grid-column: -2;
+  grid-column: 3/4;
 }
 
 #equipeTxt {
-  grid-row: 3;
+  grid-column: 1/3;
+  grid-row: 3/4;
 }
-@media (max-width: 600px) {
+#imgShirt {
+  grid-column: 1/2;
+}
+#imgShirt2 {
+  grid-column: 2/3;
+}
+#HowseasideRun {
+  grid-column: 1/2;
+}
+#imgTraining {
+  grid-column: 2/4;
+}
+
+@media (max-width: 700px) {
   #home {
+    height: 10%;
   }
   #imgbox img {
     width: 90%;
@@ -190,6 +209,13 @@ main {
     max-height: 300px;
   }
   #Usclub2 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .Where p {
+    text-align: justify;
   }
 }

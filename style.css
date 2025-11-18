@@ -197,11 +197,59 @@ main {
 #imgTraining {
   grid-column: 2/4;
 }
-
+footer {
+  transition: 0.3s;
+  font-family: AvenirNext;
+  color: darkblue;
+  display: flex;
+  justify-content: space-between;
+  max-height: 100px;
+  background: orange;
+}
+#contact {
+  list-style: none;
+  margin: 10px 10px 10px 30px;
+  gap: 5px;
+}
+#contact h3 {
+  text-align: center;
+}
+#contact a {
+  font-size: 1rem;
+  transition: 0.5s;
+  color: darkblue;
+}
+#contact a:hover {
+  color: white;
+}
+#logo2 {
+  display: flex;
+  align-items: start;
+}
+#Follow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  margin: 10px 30px 10px 10px;
+}
+#Follow h3 {
+  font-size: 1rem;
+  grid-column: 1/-1;
+  text-align: center;
+}
+#Follow a {
+  transition: 0.5s;
+  margin: 0 3px 0 5px;
+}
+#Follow a:hover {
+  transform: scale(1.4);
+}
 @media (max-width: 700px) {
   #home {
     height: 10%;
   }
+
   #imgbox img {
     width: 90%;
     max-width: none;
@@ -217,4 +265,6 @@ main {
   .Where p {
     text-align: justify;
   }
+  #contact a {
+  font-size: 0.8rem;
 }

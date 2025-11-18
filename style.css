@@ -265,6 +265,15 @@ footer {
 #Follow a:hover {
   transform: scale(1.4);
 }
+
+.hidden {
+  transition: 3s;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
 @media (max-width: 1000px) {
   #menu {
     font-size: 2rem;

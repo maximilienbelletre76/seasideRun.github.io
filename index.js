@@ -53,3 +53,16 @@ function autoScroll() {
 }
 
 autoScroll();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+// On observe tous les éléments avec la classe "hidden"
+document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));

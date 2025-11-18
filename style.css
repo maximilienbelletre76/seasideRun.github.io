@@ -21,8 +21,8 @@
   position: fixed;
   top: 0;
   left: 50%;
-  height: 12%;
-  width: 100px;
+  height: 90px;
+  width: 10vh;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -36,7 +36,8 @@
 }
 
 #Home img {
-  height: 80%;
+  height: 8vh;
+  width: 8vh;
 }
 
 #Home:hover {
@@ -50,11 +51,10 @@ main {
   position: fixed;
   top: 0px;
   left: 50%;
-  padding: 20px 20px 20px 20px;
+  padding-bottom: 40px;
   display: flex;
-  justify-content: flex-end;
-  width: 150px;
-  min-height: 250px;
+  width: 20vh;
+  justify-content: space-around;
   border-bottom: 5px solid orange;
   transform: translateX(-50%);
   border-radius: 0 0 100px 100px;
@@ -67,12 +67,15 @@ main {
 
 #menu {
   display: flex;
+  width: 18vh;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 100px;
   font-family: AcidGreen;
   list-style: none;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   gap: 10px;
   color: darkblue;
 }
@@ -124,7 +127,7 @@ main {
 #UsClubTitle h2 {
   padding: 0;
   color: skyblue;
-  width: 50%;
+  width: 100%;
   font-size: 5rem;
   font-weight: 10;
   -webkit-text-stroke: 1px white;
@@ -207,47 +210,64 @@ footer {
   background: orange;
 }
 #contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   list-style: none;
-  margin: 10px 10px 10px 30px;
+  margin: 10px 10px 10px 20px;
   gap: 5px;
+  max-height: 80%;
 }
 #contact h3 {
+  grid-column: 1/-1;
+  font-size: 1.2rem;
   text-align: center;
+  align-items: center;
 }
 #contact a {
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
   transition: 0.5s;
   color: darkblue;
 }
+#contact img {
+  height: 5vh;
+  width: 5vh;
+}
 #contact a:hover {
-  color: white;
+  transform: scale(1.4);
 }
-#logo2 {
-  display: flex;
-  align-items: start;
-}
+
 #Follow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
-  margin: 10px 30px 10px 10px;
+  margin: 10px 20px 10px 10px;
+  max-height: 80%;
 }
 #Follow h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   grid-column: 1/-1;
   text-align: center;
 }
 #Follow a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s;
-  margin: 0 3px 0 5px;
+}
+#Follow img {
+  height: 5vh;
+  width: 5vh;
 }
 #Follow a:hover {
   transform: scale(1.4);
 }
-@media (max-width: 700px) {
-  #home {
-    height: 10%;
+@media (max-width: 1000px) {
+  #menu {
+    font-size: 2rem;
   }
 
   #imgbox img {
@@ -265,6 +285,10 @@ footer {
   .Where p {
     text-align: justify;
   }
-  #contact a {
-  font-size: 0.8rem;
+  #contact h3 {
+    font-size: 1rem;
+  }
+}
+#Follow h3 {
+  font-size: 1rem;
 }

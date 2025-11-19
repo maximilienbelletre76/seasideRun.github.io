@@ -62,35 +62,38 @@ document.addEventListener("touchstart", setActive);
 // lancer le timer au départ
 resetTimer();
 const imgBox = document.querySelector("#imgbox");
+const totalImages = 10;
 //generer les images
-for (let i = 1; i <= 20; i++) {
-  const img = document.createElement("img");
-  img.src = `./ASSETS/BoxNews/imgbox${i}.jpg`;
-  img.alt = `image numero ${i}`;
-  img.style.borderRadius = "50px";
-  img.onload = () => {
-    imgBox.appendChild(img);
-  };
+if (imgBox) {
+  for (let i = 1; i <= totalImages; i++) {
+    const img = document.createElement("img");
+    img.src = `./ASSETS/BoxNews/imgbox${i}.jpg`;
+    img.alt = `image numero ${i}`;
+    img.style.borderRadius = "50px";
+    img.onload = () => {
+      imgBox.appendChild(img);
+    };
+  }
 }
 let speed = 1;
 let isPaused = false;
+if (imgBox) {
+  imgBox.addEventListener("mouseenter", () => (isPaused = true));
+  imgBox.addEventListener("mouseleave", () => (isPaused = false));
 
-imgBox.addEventListener("mouseenter", () => (isPaused = true));
-imgBox.addEventListener("mouseleave", () => (isPaused = false));
+  function autoScroll() {
+    if (!isPaused) {
+      imgBox.scrollLeft += speed;
 
-function autoScroll() {
-  if (!isPaused) {
-    imgBox.scrollLeft += speed;
-
-    if (imgBox.scrollLeft >= imgBox.scrollWidth - imgBox.clientWidth) {
-      imgBox.scrollLeft = 0;
+      if (imgBox.scrollLeft >= imgBox.scrollWidth - imgBox.clientWidth) {
+        imgBox.scrollLeft = 0;
+      }
     }
+    requestAnimationFrame(autoScroll);
   }
-  requestAnimationFrame(autoScroll);
+
+  autoScroll();
 }
-
-autoScroll();
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -103,3 +106,55 @@ const observer = new IntersectionObserver((entries) => {
 
 // On observe tous les éléments avec la classe "hidden"
 document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+
+// ----------------------page calendar-------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date();
+  const month = today.getMonth();
+  const year = today.getFullYear();
+
+  const monthName = [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
+  ];
+
+  const weekdays = [
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+    "Dimanche",
+  ];
+
+  document.querySelector(
+    "#monthName"
+  ).textContent = `${monthName[month]} ${year}`;
+
+  const firstDayOfMonth = new Date(year, month, 1);
+  const firstDay = firstDayOfMonth.getDay();
+  const dayInMonth = new Date(year, month + 1, 0).getDate();
+
+  const dayContainer = document.querySelector(".calendar");
+
+  const header = document.querySelector(".calendar");
+  header.classList.add(weekdays);
+  weekdays.forEach((day) => {
+    const dayDiv = document.createElement("div");
+    dayDiv.classList.add("weekdays");
+    dayDiv.textContent = day;
+    header.appendChild(dayDiv);
+  });
+  dayContainer.appendChild(header);
+});

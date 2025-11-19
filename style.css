@@ -49,7 +49,9 @@
   box-shadow: 1px -2px 12px 1px darkblue;
 }
 main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #menuContainer {
@@ -278,6 +280,25 @@ footer {
 
 .show {
   opacity: 1;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 1px solid darkblue;
+  gap: 20px;
+  width: 80%;
+}
+.header {
+  font-family: AcidGreen;
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 3rem;
+  color: darkblue;
+  padding-top: 20px;
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(7.1fr);
 }
 @media (max-width: 1000px) {
   #menu {

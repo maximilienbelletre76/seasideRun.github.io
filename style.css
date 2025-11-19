@@ -19,7 +19,7 @@
 
 #Home {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 50%;
   height: 90px;
   width: 10vh;
@@ -29,13 +29,18 @@
   background: white;
   border-bottom: 3px solid darkblue;
   border-radius: 0 0 70px 70px;
-  transition: all 0.5s ease;
+  transition: top 1s ease;
   cursor: pointer;
   transform: translateX(-50%);
   z-index: 100;
 }
 
+#Home.inactive {
+  top: -100px;
+}
+
 #Home img {
+  pointer-events: none;
   height: 8vh;
   width: 8vh;
 }

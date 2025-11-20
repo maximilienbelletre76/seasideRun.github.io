@@ -128,16 +128,84 @@ document.addEventListener("DOMContentLoaded", function () {
     "Décembre",
   ];
 
-  const weekdays = [
-    "Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi",
-    "Dimanche",
-  ];
+  const weekdays = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
+  const events = {
+    1: {
+      title: "Séance de course",
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    3: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    5: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    8: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    9: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    11: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    13: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    15: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    17: {
+      title: `Séance de course`,
+      description: "Détails sur la séance du 1er novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    19: {
+      title: "Séance d'entraînement",
+      description: "Détails sur la séance du 5 novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    23: {
+      title: "Séance d'entraînement",
+      description: "Détails sur la séance du 5 novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    25: {
+      title: "Séance d'entraînement",
+      description: "Détails sur la séance du 5 novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    27: {
+      title: "Séance d'entraînement",
+      description: "Détails sur la séance du 5 novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    30: {
+      title: "Séance d'entraînement",
+      description: "Détails sur la séance du 5 novembre",
+      image: "./ASSETS/IMG/Rond_orange.png",
+    },
+    // Ajouter d'autres événements ici...
+  };
+  // Détails des événements pour chaque jour
+
+  // Affichage du mois et de l'année
   document.querySelector(
     "#monthName"
   ).textContent = `${monthName[month]} ${year}`;
@@ -146,15 +214,74 @@ document.addEventListener("DOMContentLoaded", function () {
   const firstDay = firstDayOfMonth.getDay();
   const dayInMonth = new Date(year, month + 1, 0).getDate();
 
-  const dayContainer = document.querySelector(".calendar");
+  const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
 
-  const header = document.querySelector(".calendar");
-  header.classList.add(weekdays);
+  const dayContainer = document.querySelector(".calendar");
+  const header = document.querySelector(".days");
+
+  // Ajouter les jours de la semaine
   weekdays.forEach((day) => {
     const dayDiv = document.createElement("div");
     dayDiv.classList.add("weekdays");
     dayDiv.textContent = day;
     header.appendChild(dayDiv);
   });
+
+  // Ajouter des espaces vides avant le premier jour du mois
+  for (let i = 0; i < adjustedFirstDay; i++) {
+    const emptyDiv = document.createElement("div");
+    emptyDiv.classList.add("empty");
+    header.appendChild(emptyDiv);
+  }
+
+  let currentDay = 1;
+  // Ajouter les jours du mois
+  for (let i = adjustedFirstDay; currentDay <= dayInMonth; i++) {
+    const dayDiv = document.createElement("div");
+    dayDiv.classList.add("date");
+    dayDiv.textContent = currentDay;
+
+    // Logique pour ajouter les événements sur certains jours
+    if (events[currentDay]) {
+      const eventImg = document.createElement("img");
+      eventImg.src = events[currentDay].image;
+      eventImg.alt = events[currentDay].title;
+      eventImg.classList.add("event-img");
+
+      // Log de debug : vérifie la valeur de currentDay
+      console.log("Événement cliqué pour le jour :", currentDay);
+
+      // Ajouter un événement au clic
+      eventImg.addEventListener("click", function () {
+        console.log(currentDay);
+
+        showEventDetail(events[currentDay]);
+      });
+
+      dayDiv.appendChild(eventImg);
+    }
+
+    header.appendChild(dayDiv);
+    currentDay++;
+  }
   dayContainer.appendChild(header);
 });
+
+// Fonction pour afficher les détails de l'événement
+
+function showEventDetail(event) {
+  // Crée un élément modal (popup) pour afficher l'événement
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+
+  document.body.appendChild(modal);
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  modal.appendChild(modalContent);
+
+  const title = document.createElement("h2");
+  title.textContent = event.title;
+  modalContent.appendChild(title);
+}

@@ -14,7 +14,7 @@
 #navbar {
   width: 100%;
   height: 70px;
-  background: orange;
+  background: darkblue;
 }
 
 #Home {
@@ -51,7 +51,6 @@
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #menuContainer {
@@ -104,6 +103,8 @@ main {
   padding: 20px;
   gap: 40px;
   justify-items: center;
+  border-bottom: 2px solid #f3f2ee;
+  border-top: 2px solid f;
 }
 
 #imgbox img {
@@ -285,90 +286,66 @@ footer {
 body {
   background: darkblue;
 }
-.calendar {
-  background: darkblue;
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid white;
-  row-gap: 10px;
-  border-radius: 25px;
-}
-.header {
+
+#monthName {
   font-family: AcidGreen;
-  grid-column: 1/-1;
   text-align: center;
   font-size: 3rem;
+  width: 100%;
   color: #f3f2ee;
-  padding-top: 20px;
+}
+#monthName h2 {
+  margin-top: 20px;
+  text-shadow: 0 0 0 orange;
 }
 .days {
-  color: #f3f2ee;
+  font-family: AvenirNext;
   width: 100%;
-  grid-column: 1/-1;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #f3f2ee;
+}
+.dayNumber {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-}
-.weekdays {
-  font-family: AvenirNext;
-  font-size: 1.2rem;
 }
 .empty,
-.date {
-  color: #f3f2ee;
-  font-family: AvenirNext;
-  font-size: 1.2 rem;
+.Number {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100%;
+  font-family: AvenirNext;
+  text-align: center;
+  color: #f3f2ee;
+  font-size: 1.2rem;
   width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: start;
 }
-.event-img {
-  margin: 20px 0 20px 0;
-  height: auto;
-  width: 30%;
+.empty,
+.Number img {
+  width: 50%;
+  heigth: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
   cursor: pointer;
+  z-index: 1;
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Fond sombre */
-  padding-top: 60px;
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-}
-
-.close-btn {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
+  opacity: 0;
   position: absolute;
-  top: 10px;
-  right: 25px;
-  font-family: "Arial", sans-serif;
-  cursor: pointer;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
+  background: orange;
+  border-radius: 200px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
 }
 
 @media (max-width: 1000px) {

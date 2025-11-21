@@ -108,180 +108,107 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
 
 // ----------------------page calendar-------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const today = new Date();
-  const month = today.getMonth();
-  const year = today.getFullYear();
+const month = [
+  "janvier",
+  "Fevrier",
+  "Mars",
+  "Avril",
+  "Mai",
+  "juin",
+  "Juillet",
+  "Aout",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Decembre",
+];
 
-  const monthName = [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre",
-  ];
+const weekDay = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
-  const weekdays = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
+const events = {
+  1: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+  5: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+  13: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+  19: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+  28: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+};
 
-  const events = {
-    1: {
-      title: "Séance de course",
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    3: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    5: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    8: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    9: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    11: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    13: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    15: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    17: {
-      title: `Séance de course`,
-      description: "Détails sur la séance du 1er novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    19: {
-      title: "Séance d'entraînement",
-      description: "Détails sur la séance du 5 novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    23: {
-      title: "Séance d'entraînement",
-      description: "Détails sur la séance du 5 novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    25: {
-      title: "Séance d'entraînement",
-      description: "Détails sur la séance du 5 novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    27: {
-      title: "Séance d'entraînement",
-      description: "Détails sur la séance du 5 novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    30: {
-      title: "Séance d'entraînement",
-      description: "Détails sur la séance du 5 novembre",
-      image: "./ASSETS/IMG/Rond_orange.png",
-    },
-    // Ajouter d'autres événements ici...
-  };
-  // Détails des événements pour chaque jour
+const currentDay = new Date();
+const monthIndex = currentDay.getMonth();
+const monthNumber = monthIndex;
+const currentYear = currentDay.getFullYear();
+const dayInWeek = currentDay.getUTCDay() - 1;
+const dayInMonth = new Date(currentYear, monthIndex + 1, 0).getDate();
+const firstDayOfMonth =
+  new Date(currentDay.getFullYear(), currentDay.getMonth(), 1).getDay() - 1;
 
-  // Affichage du mois et de l'année
-  document.querySelector(
-    "#monthName"
-  ).textContent = `${monthName[month]} ${year}`;
+const containerMonth = document.querySelector("#monthName");
+const monthName = document.createElement("h2");
+monthName.textContent = month[monthIndex] + " " + currentYear;
+containerMonth.appendChild(monthName);
 
-  const firstDayOfMonth = new Date(year, month, 1);
-  const firstDay = firstDayOfMonth.getDay();
-  const dayInMonth = new Date(year, month + 1, 0).getDate();
+const containerDays = document.querySelector(".days");
+for (let i = 0; i < 7; i++) {
+  let dayOfWeek = weekDay[i];
+  const days = document.createElement("h2");
+  days.textContent = dayOfWeek;
+  containerDays.appendChild(days);
+}
 
-  const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+const containerNomberDay = document.querySelector(".dayNumber");
+for (let i = 0; i < firstDayOfMonth; i++) {
+  const empty = document.createElement("div");
+  empty.classList.add("empty");
+  empty.textContent = "  ";
+  containerNomberDay.appendChild(empty);
+}
 
-  const dayContainer = document.querySelector(".calendar");
-  const header = document.querySelector(".days");
+for (let day = 1; day <= dayInMonth; day++) {
+  const dayNumber = document.createElement("div");
+  dayNumber.classList.add("Number");
+  dayNumber.textContent = day;
+  containerNomberDay.appendChild(dayNumber);
 
-  // Ajouter les jours de la semaine
-  weekdays.forEach((day) => {
-    const dayDiv = document.createElement("div");
-    dayDiv.classList.add("weekdays");
-    dayDiv.textContent = day;
-    header.appendChild(dayDiv);
-  });
+  if (events[day]) {
+    const event = events[day];
+    const imgEvents = document.createElement("img");
+    imgEvents.classList.add("imgEvent");
+    imgEvents.src = events[day].image;
+    imgEvents.alt = events[day].description;
+    dayNumber.appendChild(imgEvents);
 
-  // Ajouter des espaces vides avant le premier jour du mois
-  for (let i = 0; i < adjustedFirstDay; i++) {
-    const emptyDiv = document.createElement("div");
-    emptyDiv.classList.add("empty");
-    header.appendChild(emptyDiv);
+    imgEvents.addEventListener("click", () => {
+      ShowEventsDetail(events[day]);
+    });
   }
+}
 
-  let currentDay = 1;
-  // Ajouter les jours du mois
-  for (let i = adjustedFirstDay; currentDay <= dayInMonth; i++) {
-    const dayDiv = document.createElement("div");
-    dayDiv.classList.add("date");
-    dayDiv.textContent = currentDay;
-
-    // Logique pour ajouter les événements sur certains jours
-    if (events[currentDay]) {
-      const eventImg = document.createElement("img");
-      eventImg.src = events[currentDay].image;
-      eventImg.alt = events[currentDay].title;
-      eventImg.classList.add("event-img");
-
-      // Log de debug : vérifie la valeur de currentDay
-      console.log("Événement cliqué pour le jour :", currentDay);
-
-      // Ajouter un événement au clic
-      eventImg.addEventListener("click", function () {
-        console.log(currentDay);
-
-        showEventDetail(events[currentDay]);
-      });
-
-      dayDiv.appendChild(eventImg);
-    }
-
-    header.appendChild(dayDiv);
-    currentDay++;
-  }
-  dayContainer.appendChild(header);
-});
-
-// Fonction pour afficher les détails de l'événement
-
-function showEventDetail(event) {
-  // Crée un élément modal (popup) pour afficher l'événement
-  const modal = document.createElement("div");
-  modal.classList.add("modal");
-
-  document.body.appendChild(modal);
-
-  const modalContent = document.createElement("div");
-  modalContent.classList.add("modal-content");
-
-  modal.appendChild(modalContent);
-
-  const title = document.createElement("h2");
-  title.textContent = event.title;
-  modalContent.appendChild(title);
+function ShowEventsDetail(event) {
+  const modalContainer = document.querySelector(".modal");
+  modalContainer.style.opacity = "1";
 }

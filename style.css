@@ -335,6 +335,7 @@ body {
   z-index: 1;
 }
 
+<<<<<<< HEAD
 .modalContainer {
   display: flex;
   flex-direction: column;
@@ -343,11 +344,17 @@ body {
   opacity: 0;
   position: absolute;
   padding: 5%;
+=======
+.modal {
+  opacity: 0;
+  position: absolute;
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
   top: 50%;
   left: 50%;
   width: 75%;
   height: 75%;
   background: orange;
+<<<<<<< HEAD
   transform: translate(-50%, -50%);
   transition: 2s;
 }
@@ -363,6 +370,11 @@ body {
 #modalButton:hover{
   box-shadow: 0 2px 0 white;
 
+=======
+  border-radius: 200px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
 }
 
 @media (max-width: 1000px) {

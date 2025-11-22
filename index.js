@@ -128,6 +128,7 @@ const weekDay = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const events = {
   1: {
     rdv: "19H00",
+<<<<<<< HEAD
     localisation:
       "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
     lieu: "Local",
@@ -140,24 +141,46 @@ const events = {
   5: {
     rdv: "19H00",
     localisation: "rue du plain marché,76370 petit caux",
+=======
+    localistion: "rue du plain marché,76370 petit caux",
+    description: "Run Blabla",
+    image: "./ASSETS/IMG/Rond_orange.png",
+  },
+  5: {
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
     description: "Run Blabla",
     image: "./ASSETS/IMG/Rond_orange.png",
   },
   13: {
+<<<<<<< HEAD
     rdv: "18H00",
     localisation: "rue du plain marché,76370 petit caux",
+=======
+    rdv: "19H00",
+    localistion: "rue du plain marché,76370 petit caux",
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
     description: "Run Blabla",
     image: "./ASSETS/IMG/Rond_orange.png",
   },
   19: {
     rdv: "19H00",
+<<<<<<< HEAD
     localisation: "rue du plain marché,76370 petit caux",
+=======
+    localistion: "rue du plain marché,76370 petit caux",
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
     description: "Run Blabla",
     image: "./ASSETS/IMG/Rond_orange.png",
   },
   28: {
     rdv: "19H00",
+<<<<<<< HEAD
     localisation: "rue du plain marché,76370 petit caux",
+=======
+    localistion: "rue du plain marché,76370 petit caux",
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
     description: "Run Blabla",
     image: "./ASSETS/IMG/Rond_orange.png",
   },
@@ -214,6 +237,7 @@ for (let day = 1; day <= dayInMonth; day++) {
 }
 
 function ShowEventsDetail(event) {
+<<<<<<< HEAD
   const modalContainer = document.querySelector(".modalContainer");
   const modalContent = document.querySelector("#modalContent");
   modalContainer.style.opacity = "1";
@@ -244,4 +268,8 @@ function ShowEventsDetail(event) {
   modalContent.appendChild(title);
   modalContent.appendChild(modalLoca);
   modalContent.appendChild(desc);
+=======
+  const modalContainer = document.querySelector(".modal");
+  modalContainer.style.opacity = "1";
+>>>>>>> 6c9e88a17bc148e732720b55290402ea75d68dff
 }

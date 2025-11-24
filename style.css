@@ -384,22 +384,7 @@ body {
   border-radius: 50%;
   animation: pulse 1.5s infinite; /* animation pulsante */
   z-index: -1;
- 
 }
-
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
 
 .modalContainer {
   display: flex;

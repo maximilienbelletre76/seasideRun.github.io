@@ -133,44 +133,75 @@ const events = {
     lieu: "Local",
     title: "Run Blabla",
     description:
-      "10min de renfo + Run BlaBla de 40min a 50min selon les groupes ",
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
-    image2: "./ASSETS/IMG/whyseaside run.jpg",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
+  },
+  3: {
+    rdv: "19H00",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
+    image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
   5: {
     rdv: "19H00",
-    localisation: "rue du plain marché,76370 petit caux",
-    localistion: "rue du plain marché,76370 petit caux",
-    description: "Run Blabla",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
   5: {
     rdv: "19H00",
-    localistion: "rue du plain marché,76370 petit caux",
-    description: "Run Blabla",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
   13: {
-    rdv: "18H00",
-    localisation: "rue du plain marché,76370 petit caux",
     rdv: "19H00",
-    localistion: "rue du plain marché,76370 petit caux",
-    description: "Run Blabla",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
   19: {
     rdv: "19H00",
-    localisation: "rue du plain marché,76370 petit caux",
-    localistion: "rue du plain marché,76370 petit caux",
-    description: "Run Blabla",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
   28: {
     rdv: "19H00",
-    localisation: "rue du plain marché,76370 petit caux",
-    localistion: "rue du plain marché,76370 petit caux",
-    description: "Run Blabla",
+    localisation:
+      "https://www.google.fr/maps/place/Gymnase+scolaire/@49.9597573,1.1820921,17z/data=!4m15!1m8!3m7!1s0x47e0a6dd1a19fe1b:0xdc96561fab8f1616!2s2+Rue+du+Plain+March%C3%A9,+76370+Petit-Caux!3b1!8m2!3d49.963015!4d1.189613!16s%2Fg%2F11txhzdm8_!3m5!1s0x47e0a7e7b93b9aef:0x985ef0efb458bb3b!8m2!3d49.9595255!4d1.1833977!16s%2Fg%2F11tjs4tn80?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3Drue du plain marché,76370 petit caux",
+    lieu: "Local",
+    title: "Run Blabla",
+    description:
+      "40 à 60 minutes de course à allure facile (EF) pour travailler l’endurance et le plaisir de courir.\n10 minutes de renforcement musculaire ciblé pour prévenir les blessures et améliorer la posture.",
     image: "./ASSETS/IMG/Rond_orange.png",
+    image2: "./ASSETS/IMG/Howseasiderun.jpg",
   },
 };
 
@@ -204,18 +235,25 @@ for (let i = 0; i < firstDayOfMonth; i++) {
   containerNomberDay.appendChild(empty);
 }
 
+console.log(currentDay);
+
 for (let day = 1; day <= dayInMonth; day++) {
   const dayNumber = document.createElement("div");
   dayNumber.classList.add("Number");
   dayNumber.textContent = day;
+
+  if (day === currentDay.getDate()) {
+    dayNumber.classList.add("currentDay");
+  }
   containerNomberDay.appendChild(dayNumber);
 
   if (events[day]) {
     const event = events[day];
     const imgEvents = document.createElement("img");
+    imgEvents.src = event.image;
+    imgEvents.alt = event.title;
     imgEvents.classList.add("imgEvent");
-    imgEvents.src = events[day].image;
-    imgEvents.alt = events[day].description;
+
     dayNumber.appendChild(imgEvents);
 
     imgEvents.addEventListener("click", () => {
@@ -228,12 +266,13 @@ function ShowEventsDetail(event) {
   const modalContainer = document.querySelector(".modalContainer");
   const modalContent = document.querySelector("#modalContent");
   modalContainer.style.opacity = "1";
-
+  modalContainer.style.zIndex = "10";
   modalContent.innerHTML = "";
 
   const modalButton = document.querySelector("#modalButton");
   modalButton.addEventListener("click", () => {
     modalContainer.style.opacity = "0";
+    modalContainer.style.zIndex = "-2";
   });
 
   const rdv = document.createElement("h2");
@@ -241,7 +280,7 @@ function ShowEventsDetail(event) {
 
   const modalLoca = document.createElement("a");
   modalLoca.href = event.localisation;
-  modalLoca.textContent = "Adresse: " + event.lieu;
+  modalLoca.textContent = event.lieu;
   modalLoca.target = "_blank";
   modalLoca.rel = "noopener noreferrer";
 
@@ -249,9 +288,15 @@ function ShowEventsDetail(event) {
   title.textContent = event.title;
 
   const desc = document.createElement("p");
-  desc.textContent = "description: " + event.description;
+  desc.textContent = event.description;
+
+  const img2 = document.createElement("img");
+  img2.src = event.image2;
+  img2.alt = event.description;
 
   modalContent.appendChild(rdv);
   modalContent.appendChild(title);
   modalContent.appendChild(modalLoca);
-  modalContent.appendChild(desc);}
+  modalContent.appendChild(desc);
+  modalContent.appendChild(img2);
+}

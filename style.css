@@ -52,6 +52,7 @@
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #menuContainer {
@@ -300,12 +301,21 @@ footer {
 body {
   background: darkblue;
 }
+.calendar {
+  width: 80%;
+  height: 80%;
+  border-bottom: 2px solid orange;
+  border-top: 2px solid orange;
+  border-radius: 8%;
+  margin: 0 0 5% 0;
+  padding: 0 3% 0 3%;
+}
 
 #monthName {
   font-family: AcidGreen;
   text-align: center;
   font-size: 3rem;
-  width: 100%;
+  width: 80;
   color: #f3f2ee;
 }
 
@@ -322,6 +332,7 @@ body {
   justify-content: space-around;
   align-items: center;
   color: #f3f2ee;
+  font-size: 1rem;
 }
 
 .dayNumber {
@@ -336,13 +347,12 @@ body {
   font-family: AvenirNext;
   text-align: center;
   color: #f3f2ee;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 100%;
   justify-content: space-around;
   align-items: center;
   justify-content: start;
 }
-
 .empty,
 .Number img {
   width: 50%;
@@ -354,26 +364,112 @@ body {
   z-index: 1;
 }
 
+.currentDay {
+  position: relative;
+  font-weight: bold;
+  z-index: 1;
+  color: orange;
+  font-size: 1.5rem;
+}
+
+.currentDay::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* taille du cercle */
+  height: 60%;
+  border: 3px solid #ff6600; /* couleur du cercle */
+  border-radius: 50%;
+  animation: pulse 1.5s infinite; /* animation pulsante */
+  z-index: -1;
+ 
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
 .modalContainer {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
   align-items: center;
   justify-content: space-between;
   opacity: 0;
   position: absolute;
+  background: orange;
   padding: 5%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  border-radius: 25% 5% 25% 5%;
+  z-index: -2;
+  box-shadow: 0 0 14px 7px #f3f2ee;
 }
 
-.modal {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 75%;
-  height: 75%;
-  background: orange;
-  transform: translate(-50%, -50%);
-  transition: 2s;
+#modalContent {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  font-family: AvenirNext;
+}
+#modalContent h2 {
+  font-family: AcidGreen;
+  font-size: 3rem;
+  color: darkblue;
+}
+#modalContent p {
+  margin: 0;
+  padding: 5%;
+  border-left: 1px solid darkblue;
+  font-weight: 300;
+  white-space: pre-line;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+#modalContent a {
+  text-decoration: none;
+  font-family: AvenirNext;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#modalContent a:active {
+  color: white;
+}
+
+#modalContent a:hover {
+  color: white;
+}
+
+#modalContent img {
+  align-items: center;
+  grid-column: 1/-1;
+  width: 90%;
+  margin: 5%;
+  height: auto;
+
+  border-radius: 25% 25% 25% 25%;
+  box-shadow: 0 0 14px 6px darkblue;
 }
 
 #modalButton {
@@ -388,7 +484,7 @@ body {
 }
 
 #modalButton:hover {
-  box-shadow: 0 2px 0 white;
+  box-shadow: 0px 0px 14px 9px white;
 }
 
 @media (max-width: 1000px) {
@@ -418,5 +514,41 @@ body {
 
   #Follow h3 {
     font-size: 1rem;
+  }
+
+  .days {
+    font-size: 0.7rem;
+  }
+  .modalContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    position: absolute;
+    background: orange;
+    padding: 3%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    border-radius: 15% 5% 15% 5%;
+    z-index: -2;
+    box-shadow: 0 0 14px 7px #f3f2ee;
+  }
+  #modalContent h2 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+
+  #modalContent img {
+    align-items: center;
+    grid-column: 1/-1;
+    width: 90%;
+    height: 90%;
+    border-radius: 15%;
+    box-shadow: 0 0 14px 6px darkblue;
   }
 }

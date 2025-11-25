@@ -6,6 +6,12 @@
   font-family: AvenirNext;
   src: url(./ASSETS/police/Avenir\ Next.ttf);
 }
+
+body {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +56,7 @@
 }
 
 main {
+  transition: 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,7 +297,7 @@ footer {
 }
 
 .hidden {
-  transition: 3s;
+  transition: 1.5s;
   opacity: 0;
 }
 
@@ -302,13 +309,13 @@ body {
   background: darkblue;
 }
 .calendar {
-  width: 80%;
+  width: 60%;
   height: 80%;
   border-bottom: 2px solid orange;
   border-top: 2px solid orange;
   border-radius: 8%;
-  margin: 0 0 5% 0;
   padding: 0 3% 0 3%;
+  background: rgb(22, 44, 243);
 }
 
 #monthName {
@@ -352,6 +359,7 @@ body {
   justify-content: space-around;
   align-items: center;
   justify-content: start;
+  transition: 0.5s;
 }
 .empty,
 .Number img {
@@ -362,6 +370,11 @@ body {
   align-items: center;
   cursor: pointer;
   z-index: 1;
+  transition: 0.5s;
+}
+
+.Number img:hover {
+  transform: scale(1.2);
 }
 
 .currentDay {
@@ -370,20 +383,9 @@ body {
   z-index: 1;
   color: orange;
   font-size: 1.5rem;
-}
-
-.currentDay::before {
-  content: "";
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%; /* taille du cercle */
-  height: 60%;
-  border: 3px solid #ff6600; /* couleur du cercle */
-  border-radius: 50%;
-  animation: pulse 1.5s infinite; /* animation pulsante */
-  z-index: -1;
+  border-top: 2px solid orange;
+  border-radius: 10%;
+  padding: 3%;
 }
 
 .modalContainer {
@@ -471,7 +473,71 @@ body {
 #modalButton:hover {
   box-shadow: 0px 0px 14px 9px white;
 }
+.training {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  text-align: center;
+  color: #f3f2ee;
+  justify-items: center;
+}
+.training h2 {
+  text-shadow: 1px -1px 0px white;
+  font-family: AcidGreen;
+  font-size: 2.5rem;
+  color: skyblue;
+}
+.training h1 {
+  border-bottom: 2px solid orange;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  grid-column: 1/-1;
+  font-family: AcidGreen;
+  color: #f3f2ee;
+  font-size: 3rem;
+}
+.training p {
+  font-family: AvenirNext;
+  font-size: 1.1rem;
+  font-weight: 100;
+  text-align: justify;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.Seances {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#blablarun {
+  grid-row: 2/4;
+  grid-column: 2/3;
+}
+.imgSeance {
+  width: 50%;
+  margin: 5%;
+  border-radius: 70%;
+  border: 2px solid orange;
+  box-shadow: 0 0 14px 7px #f3f2ee;
+}
+#imgBlablarun {
+  grid-row: 2/4;
+}
 
+#imgSortieLongue {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+#imgGroupeMarche {
+  width: 90%;
+}
+#imgEvenement {
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
 @media (max-width: 1000px) {
   #menu {
     font-size: 2rem;
@@ -500,7 +566,15 @@ body {
   #Follow h3 {
     font-size: 1rem;
   }
-
+  .calendar {
+    width: 90%;
+    height: 80%;
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 8%;
+    margin: 0 0 5% 0;
+    padding: 0 3% 0 3%;
+  }
   .days {
     font-size: 0.7rem;
   }
@@ -523,6 +597,11 @@ body {
     z-index: -2;
     box-shadow: 0 0 14px 7px #f3f2ee;
   }
+  #modalContent {
+    display: block;
+    border: none;
+    text-align: center;
+  }
   #modalContent h2 {
     margin-top: 20px;
     font-size: 2.5rem;
@@ -535,5 +614,36 @@ body {
     height: 90%;
     border-radius: 15%;
     box-shadow: 0 0 14px 6px darkblue;
+  }
+  .training {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #f3f2ee;
+    justify-items: center;
+  }
+  .training h1 {
+    border-bottom: 2px solid orange;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-column: 1/-1;
+    font-family: AcidGreen;
+    color: #f3f2ee;
+    font-size: 2.5rem;
+  }
+  .training p {
+    font-family: AvenirNext;
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: justify;
+    margin: 20px;
+  }
+  .training h2 {
+    margin: 10px;
+    font-family: AcidGreen;
+    font-size: 2rem;
   }
 }

@@ -3,6 +3,10 @@ const logo = document.querySelector("#Home");
 const menu = document.querySelector("#menuContainer");
 let menuOpen = false;
 
+window.addEventListener("load", () => {
+  document.body.style.opacity = 1;
+});
+
 function showMenu() {
   menu.style.visibility = "visible";
   menu.style.opacity = "0.8";
@@ -265,14 +269,18 @@ for (let day = 1; day <= dayInMonth; day++) {
 function ShowEventsDetail(event) {
   const modalContainer = document.querySelector(".modalContainer");
   const modalContent = document.querySelector("#modalContent");
+  const body = document.querySelector("main");
+
   modalContainer.style.opacity = "1";
   modalContainer.style.zIndex = "10";
   modalContent.innerHTML = "";
+  body.style.opacity = "0.4";
 
   const modalButton = document.querySelector("#modalButton");
   modalButton.addEventListener("click", () => {
     modalContainer.style.opacity = "0";
     modalContainer.style.zIndex = "-2";
+    body.style.opacity = "1";
   });
 
   const rdv = document.createElement("h2");

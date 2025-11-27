@@ -101,6 +101,7 @@ main {
 }
 
 #imgbox {
+  width: 100%;
   background: orange;
   transition: 0.5s;
   overflow-x: auto;
@@ -109,7 +110,8 @@ main {
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   gap: 40px;
   justify-items: center;
   border-bottom: 2px solid #f3f2ee;
@@ -308,7 +310,37 @@ footer {
 body {
   background: darkblue;
 }
+
+.test {
+  margin-top: 20px;
+  width: 100%;
+  color: #f3f2ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.test h2 {
+  text-align: center;
+  width: 60%;
+  font-family: AcidGreen;
+  font-size: 2.5rem;
+  margin: 2% 0 2% 0;
+  background: rgb(22, 44, 243);
+  padding: 1%;
+  border-radius: 100%;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+}
+
+.test p {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5;
+  padding: 1%;
+  margin: 0 20px 0 20px;
+}
 .calendar {
+  margin-top: 20px;
   width: 60%;
   height: 80%;
   border-bottom: 2px solid orange;
@@ -498,9 +530,8 @@ body {
   font-size: 3rem;
 }
 .training p {
-  font-family: AvenirNext;
-  font-size: 1.1rem;
-  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
   text-align: justify;
   margin-left: 100px;
   margin-right: 100px;
@@ -523,6 +554,40 @@ body {
   border: 2px solid orange;
   box-shadow: 0 0 14px 7px #f3f2ee;
 }
+
+#GroupeMarche {
+  grid-column: 1/-1;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+#GroupeMarche h2 {
+  grid-column: 1/-1;
+}
+#GroupeMarche p {
+  grid-column: 1/-1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: start;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#GroupeMarche h3 {
+  font-family: AcidGreen;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#GroupeMarche img {
+  width: 80%;
+  border-radius: 20%;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  margin: 10px;
+  box-shadow: 0 0 14px 7px #f3f2ee;
+}
 #imgBlablarun {
   grid-row: 2/4;
 }
@@ -537,6 +602,106 @@ body {
 #imgEvenement {
   grid-column: 1/2;
   grid-row: 7/8;
+}
+.register {
+  margin-top: 30px;
+  width: 100%;
+  color: #f3f2ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register h1 {
+  font-family: AcidGreen;
+  font-size: 3.5rem;
+  width: 100%;
+  color: darkblue;
+  text-align: center;
+  border-top: 1px solid #f3f2ee;
+  border-bottom: 1px solid #f3f2ee;
+  background: orange;
+  box-shadow: 0px 5px 3px 0 skyblue;
+  width: 100%;
+}
+.register p {
+  padding: 1% 0 2% 0;
+  width: 90%;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+.formRegOrTest {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+  justify-items: center;
+  font-family: AcidGreen;
+  font-size: 2.5rem;
+  margin: 2%;
+  box-shadow: 0 0 0#f3f2ee;
+}
+.choiceForm {
+  transition: 0.3s;
+  text-align: center;
+  margin: 3%;
+}
+/* Cacher la checkbox réelle */
+.choiceForm input {
+  display: none;
+}
+
+/* Créer la case personnalisée */
+.choiceForm .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid orange;
+  border-radius: 50%; /* rond */
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+}
+.choiceForm input:checked + .checkmark {
+  background-color: orange;
+  border-color: orange;
+}
+
+.choiceForm input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.formRegOrTest img {
+  grid-column: 1/-1;
+  width: 95%;
+  margin: 20px;
+  border-radius: 25%;
+  border: 2px solid orange;
+}
+.infoRegister {
+  background: rgba(21, 21, 250, 0.979);
+  width: 80%;
+  padding: 5%;
+  border-radius: 10%;
+  border: 1px solid orange;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.infoRegister ol {
+  text-align: start;
+  font-size: 1.2rem;
+}
+.infoRegister p {
+  text-align: justify;
+  font-size: 1.1rem;
 }
 @media (max-width: 1000px) {
   #menu {
@@ -572,7 +737,7 @@ body {
     border-bottom: 2px solid orange;
     border-top: 2px solid orange;
     border-radius: 8%;
-    margin: 0 0 5% 0;
+    margin: 20px 0 5% 0;
     padding: 0 3% 0 3%;
   }
   .days {
@@ -635,9 +800,8 @@ body {
     font-size: 2.5rem;
   }
   .training p {
-    font-family: AvenirNext;
-    font-size: 0.9rem;
-    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
     text-align: justify;
     margin: 20px;
   }
@@ -645,5 +809,56 @@ body {
     margin: 10px;
     font-family: AcidGreen;
     font-size: 2rem;
+  }
+  .test h2 {
+    text-align: center;
+    width: 90%;
+    font-family: AcidGreen;
+    font-size: 2rem;
+    margin: 0 3% 0 3%;
+    background: rgb(22, 44, 243);
+    padding: 2%;
+    border-radius: 30px;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+  }
+  #GroupeMarche {
+    grid-column: 1/-1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 600px;
+  }
+  #groupe3 {
+    grid-row: 5/6;
+  }
+  #groupeM {
+    grid-row: 5/6;
+    grid-column: 2/3;
+  }
+  .register h1 {
+    font-family: AcidGreen;
+    font-size: 2rem;
+    width: 100%;
+    color: darkblue;
+    text-align: center;
+    border-top: 1px solid #f3f2ee;
+    border-bottom: 1px solid #f3f2ee;
+    background: orange;
+    box-shadow: 0px 5px 3px 0 skyblue;
+    width: 100%;
+  }
+  .formRegOrTest {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 95%;
+    justify-items: center;
+    font-family: AcidGreen;
+    font-size: 1.4rem;
+    margin: 2%;
+    box-shadow: 0 0 0#f3f2ee;
+  }
+  #test {
+    grid-row: 3/4;
   }
 }

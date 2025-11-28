@@ -703,6 +703,17 @@ body {
   text-align: justify;
   font-size: 1.1rem;
 }
+.FormRegister {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #f3f2ee;
+  z-index: 1;
+  transform: translateY(-50%);
+}
 @media (max-width: 1000px) {
   #menu {
     font-size: 2rem;

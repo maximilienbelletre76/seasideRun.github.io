@@ -90,10 +90,52 @@
             </ol>
           </div>
         </div>
-        <div class="formRegister"></div>
+      </div>
+      <div class="FormRegister">
+        <h2 id="titleForm">Formulaire D'inscription</h2>
+        <label for=""
+          ><input type="radio" name="sexe" id="feminin" />Femme</label
+        >
+        <label for=""><input type="radio" name="sexe" id="homme" />Homme</label>
+        <label for=""
+          ><input type="radio" name="sexe" id="autre" />Ne se prononce
+          pas</label
+        >
+
+        <input type="text" placeholder="Nom" />
+        <input type="text" placeholder="Prenom" />
+        <input
+          type="date"
+          name="Birth"
+          id="DateOfBirth"
+          placeholder="Date de naissance"
+        />
+        <label for="">Adresse :</label>
+        <input type="text" name="Adress" id="street" placeholder="rue" />
+        <label for="">Code postale</label>
+        <input type="text" id="zip" placeholder="76000" />
+        <label for="">Ville</label>
+        <input type="text" id="City" placeholder="Rouen" />
+        <label for="">Section Seaside Running ?</label>
+        <select id="Section">
+          <option value="Berneval">Berneval</option>
+        </select>
+        <input type="tel" id="phone" placeholder="Numero de telephone" />
+        <label for="">Je m'engage a fournir un certificat medical</label>
+        <label for=""><input type="radio" id="Medicalyes" />Je m'y engage </label>
+          <label for=""
+            ><input type="radio" id="Medicalno" />Je m'y engage pas</label
+          >
+        </label>
+        <input type="file" id="rulesFile" accept=".pdf"/>
+        <label for="">
+          <input type="checkbox" id="acceptRules">
+          j'ai lu et j'accepte le règlement
+        </label>
+        
       </div>
     </main>
-    <script src="index.js"></script>
+   
     <footer>
       <div id="contact">
         <h3>Nous contacter</h3>
@@ -137,5 +179,6 @@
         /></a>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

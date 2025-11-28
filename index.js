@@ -266,6 +266,11 @@ for (let day = 1; day <= dayInMonth; day++) {
   }
 }
 
+// -------------------------page contact-----------------------------
+
+const formChoice = document.querySelector(".formRegorTest");
+console.log(formChoice);
+
 function ShowEventsDetail(event) {
   const modalContainer = document.querySelector(".modalContainer");
   const modalContent = document.querySelector("#modalContent");
